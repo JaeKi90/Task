@@ -218,7 +218,38 @@
                             <constraint firstItem="pk8-7b-cTL" firstAttribute="leading" secondItem="3Hv-TL-P5f" secondAttribute="leading" id="nbD-aA-7tf"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26j-RB-P8g">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MFV-37-v8Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="359"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인기 급상승 채용 공고" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="li7-wX-rcp">
+                                <rect key="frame" x="20" y="0.0" width="171.5" height="24"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <color key="textColor" name="Gray01"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="B4y-fv-Gxc">
+                                <rect key="frame" x="0.0" y="24" width="375" height="335"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="scrollIndicatorInsets" minX="20" minY="16" maxX="0.0" maxY="0.0"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TmU-Ck-UCB">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="B4y-fv-Gxc" firstAttribute="leading" secondItem="MFV-37-v8Y" secondAttribute="leading" id="1lS-Fk-BfP"/>
+                            <constraint firstAttribute="trailing" secondItem="B4y-fv-Gxc" secondAttribute="trailing" id="91M-nc-JdD"/>
+                            <constraint firstItem="li7-wX-rcp" firstAttribute="top" secondItem="MFV-37-v8Y" secondAttribute="top" id="AAZ-I2-HMi"/>
+                            <constraint firstAttribute="bottom" secondItem="B4y-fv-Gxc" secondAttribute="bottom" id="Cei-TC-89S"/>
+                            <constraint firstItem="li7-wX-rcp" firstAttribute="leading" secondItem="MFV-37-v8Y" secondAttribute="leading" constant="20" id="QfK-Jt-6wy"/>
+                            <constraint firstItem="B4y-fv-Gxc" firstAttribute="top" secondItem="li7-wX-rcp" secondAttribute="bottom" id="VA4-Ug-MrX"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26j-RB-P8g" userLabel="SeperateView">
                         <rect key="frame" x="0.0" y="379" width="375" height="1"/>
                         <color key="backgroundColor" name="Gray03"/>
                         <constraints>
@@ -230,13 +261,17 @@
                     <constraint firstAttribute="trailing" secondItem="26j-RB-P8g" secondAttribute="trailing" id="07t-fs-Kmt"/>
                     <constraint firstItem="26j-RB-P8g" firstAttribute="leading" secondItem="m1g-cx-hgf" secondAttribute="leading" id="2FC-R1-RYa"/>
                     <constraint firstItem="8uS-Rb-UJz" firstAttribute="top" secondItem="Rv6-xG-KPN" secondAttribute="bottom" constant="16" id="3lw-6z-pre"/>
+                    <constraint firstItem="26j-RB-P8g" firstAttribute="top" secondItem="MFV-37-v8Y" secondAttribute="bottom" constant="20" id="9mg-Zf-Vi4"/>
+                    <constraint firstItem="MFV-37-v8Y" firstAttribute="top" secondItem="m1g-cx-hgf" secondAttribute="top" id="9nb-7H-W9N"/>
                     <constraint firstAttribute="trailing" secondItem="3Hv-TL-P5f" secondAttribute="trailing" constant="20" id="Bnt-g4-y01"/>
+                    <constraint firstItem="MFV-37-v8Y" firstAttribute="leading" secondItem="m1g-cx-hgf" secondAttribute="leading" id="Gtv-2f-vGO"/>
                     <constraint firstItem="Rv6-xG-KPN" firstAttribute="leading" secondItem="m1g-cx-hgf" secondAttribute="leading" constant="20" id="Kcz-op-VoN"/>
                     <constraint firstItem="26j-RB-P8g" firstAttribute="top" secondItem="8uS-Rb-UJz" secondAttribute="bottom" constant="20" id="Pit-Xf-hrx"/>
                     <constraint firstItem="26j-RB-P8g" firstAttribute="top" secondItem="3Hv-TL-P5f" secondAttribute="bottom" constant="20" id="Qhv-bg-CaO"/>
                     <constraint firstItem="8uS-Rb-UJz" firstAttribute="leading" secondItem="m1g-cx-hgf" secondAttribute="leading" constant="20" id="ZAN-bV-y78"/>
                     <constraint firstItem="3Hv-TL-P5f" firstAttribute="top" secondItem="Rv6-xG-KPN" secondAttribute="bottom" constant="12" id="ZgP-fx-7Co"/>
                     <constraint firstAttribute="trailing" secondItem="8uS-Rb-UJz" secondAttribute="trailing" constant="20" id="hl1-mM-8ju"/>
+                    <constraint firstAttribute="trailing" secondItem="MFV-37-v8Y" secondAttribute="trailing" id="jLx-XI-Lqf"/>
                     <constraint firstItem="Rv6-xG-KPN" firstAttribute="top" secondItem="m1g-cx-hgf" secondAttribute="top" id="qHL-O3-0wZ"/>
                     <constraint firstAttribute="trailing" secondItem="Rv6-xG-KPN" secondAttribute="trailing" constant="20" id="qpn-KP-ZpH"/>
                     <constraint firstItem="3Hv-TL-P5f" firstAttribute="leading" secondItem="m1g-cx-hgf" secondAttribute="leading" constant="20" id="reQ-Na-t98"/>
@@ -248,6 +283,8 @@
                 <outlet property="companyNameLabel" destination="rpW-SJ-f6K" id="2pP-g4-Tew"/>
                 <outlet property="companyTypeView" destination="8uS-Rb-UJz" id="lB3-Q3-2hK"/>
                 <outlet property="consPointLabel" destination="EWg-0H-W3g" id="vKe-LJ-smK"/>
+                <outlet property="hotCompaniesCollectionView" destination="B4y-fv-Gxc" id="BYC-cx-sd3"/>
+                <outlet property="hotCompaniesView" destination="MFV-37-v8Y" id="FAE-uX-maI"/>
                 <outlet property="industryLabel" destination="uTy-I0-JSb" id="9vB-09-mxU"/>
                 <outlet property="interviewQuestionLabel" destination="WBA-5m-wVD" id="mqI-Au-5xy"/>
                 <outlet property="logoImageView" destination="fqj-z4-ptp" id="kDC-yN-O3R"/>

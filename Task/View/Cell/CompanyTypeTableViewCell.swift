@@ -9,7 +9,7 @@ import UIKit
 
 class CompanyTypeTableViewCell: UITableViewCell {
     
-    
+    //company and review type 셀 공통 UI
     @IBOutlet weak var companyAndReviewCommonView: UIView!
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var companyNameLabel: UILabel!
@@ -17,21 +17,36 @@ class CompanyTypeTableViewCell: UITableViewCell {
     @IBOutlet weak var industryLabel: UILabel!
     @IBOutlet weak var updateDateLabel: UILabel!
     @IBOutlet weak var reviewSummaryLabel: UILabel!
-    
+    //company type UI
     @IBOutlet weak var companyTypeView: UIView!
     @IBOutlet weak var salaryLabel: UILabel!
     @IBOutlet weak var interviewQuestionLabel: UILabel!
-    
+    //review type UI
     @IBOutlet weak var reviewTypeView: UIView!
     @IBOutlet weak var prosPointLabel: UILabel!
     @IBOutlet weak var consPointLabel: UILabel!
+    //cellTypeHorizontalTheme type 셀
+    @IBOutlet weak var hotCompaniesView: UIView!
+    @IBOutlet weak var hotCompaniesCollectionView: UICollectionView!
     
     static let defaultReuseIdentifier = "CompanyTypeTableViewCell"
+    
+    var recommendRecruits = [RecruitItem]()
+    
+    private func cofigureCollectionView() {
+        let nib = UINib.init(nibName: RecuruitCollectionViewCell.defaultReuseIdentifier, bundle: nil)
+        self.hotCompaniesCollectionView.register(nib, forCellWithReuseIdentifier: RecuruitCollectionViewCell.defaultReuseIdentifier)
+
+        self.hotCompaniesCollectionView.delegate = self
+        self.hotCompaniesCollectionView.dataSource = self
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.selectionStyle = .none
+        
+        self.cofigureCollectionView()
     }
     
     func render(cellItem: CellItem) {
@@ -41,7 +56,7 @@ class CompanyTypeTableViewCell: UITableViewCell {
         case .cellTypeReview:
             self.setReviewTypeView(cellItem: cellItem)
         case .cellTypeHorizontalTheme:
-            print("cellTypeHorizontalTheme")
+            self.setTypeHorizontalThemeView(cellItem: cellItem)
         }
     }
     
@@ -79,6 +94,7 @@ class CompanyTypeTableViewCell: UITableViewCell {
         
         //view 숨김처리
         self.companyTypeView.isHidden = true
+        self.hotCompaniesView.isHidden = true
         
         self.reviewTypeView.isHidden = false
         
@@ -124,6 +140,7 @@ class CompanyTypeTableViewCell: UITableViewCell {
         
         //view 숨김처리
         self.reviewTypeView.isHidden = true
+        self.hotCompaniesView.isHidden = true
         
         self.companyTypeView.isHidden = false
         
@@ -136,4 +153,46 @@ class CompanyTypeTableViewCell: UITableViewCell {
         
     }
     
+    private func setTypeHorizontalThemeView(cellItem: CellItem) {
+        if let recruitItems = cellItem.recommendRecruit {
+            self.recommendRecruits = recruitItems
+        }
+        
+        self.reviewTypeView.isHidden = true
+        self.companyTypeView.isHidden = true
+        
+        self.hotCompaniesView.isHidden = false
+        
+        self.hotCompaniesCollectionView.reloadData()
+    }
+    
+}
+
+extension CompanyTypeTableViewCell: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return recommendRecruits.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        let cell = self.hotCompaniesCollectionView.dequeueReusableCell(
+            withReuseIdentifier: RecuruitCollectionViewCell.defaultReuseIdentifier,
+            for: indexPath
+        ) as! RecuruitCollectionViewCell
+
+        cell.render(recruitItem: recommendRecruits[indexPath.row], bookMarkRelay: nil)
+
+        return cell
+    }
+}
+
+extension CompanyTypeTableViewCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+        return CGSize(width: 160, height: 228)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 12
+    }
 }

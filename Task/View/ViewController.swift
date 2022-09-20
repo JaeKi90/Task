@@ -130,7 +130,7 @@ class ViewController: RxViewController<TaskViewModel> {
         self.companyTableView.register(hotCompaniesTypeCellNib, forCellReuseIdentifier: HotCompanyTypeTableViewCell.defaultReuseIdentifier)
         
         self.companyTableView.rowHeight = UITableView.automaticDimension
-        self.companyTableView.estimatedRowHeight = 400
+        self.companyTableView.estimatedRowHeight = 315
         
         self.companyTableView.isHidden = true
     }
@@ -358,40 +358,6 @@ extension ViewController: UITableViewDataSource {
         cell.render(cellItem: self.viewModel.cellItems[indexPath.row])
 
         return cell
-        
-//        switch self.cellItems[indexPath.row].cellType {
-//        case .cellTypeReview:
-//
-//
-//        case .cellTypeCompany:
-//            let cell = companyTableView.dequeueReusableCell(
-//                withIdentifier: CompanyTypeTableViewCell.defaultReuseIdentifier,
-//                for: indexPath
-//            ) as! CompanyTypeTableViewCell
-//
-//            cell.render(cellItem: self.viewModel.cellItems[indexPath.row])
-//
-//            return cell
-//
-////        case .cellTypeHorizontalTheme:
-////            let cell = companyTableView.dequeueReusableCell(
-////                withIdentifier: HotCompanyTypeTableViewCell.defaultReuseIdentifier,
-////                for: indexPath
-////            ) as! HotCompanyTypeTableViewCell
-////
-////            if let recommendRecruits = self.viewModel.cellItems[indexPath.row].recommendRecruit {
-////                cell.render(recommendRecruits: recommendRecruits)
-////            }
-////
-////            return cell
-//        default:
-//            let cell = companyTableView.dequeueReusableCell(
-//                withIdentifier: CompanyTypeTableViewCell.defaultReuseIdentifier,
-//                for: indexPath
-//            ) as! CompanyTypeTableViewCell
-//
-//            return cell
-//        }
     }
 }
 
