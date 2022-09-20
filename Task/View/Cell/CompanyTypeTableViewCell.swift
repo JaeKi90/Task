@@ -26,7 +26,7 @@ class CompanyTypeTableViewCell: UITableViewCell {
     @IBOutlet weak var prosPointLabel: UILabel!
     @IBOutlet weak var consPointLabel: UILabel!
     //cellTypeHorizontalTheme type 셀
-    @IBOutlet weak var hotCompaniesView: UIView!
+    @IBOutlet weak var hotCompaniesLabel: UILabel!
     @IBOutlet weak var hotCompaniesCollectionView: UICollectionView!
     
     static let defaultReuseIdentifier = "CompanyTypeTableViewCell"
@@ -94,8 +94,10 @@ class CompanyTypeTableViewCell: UITableViewCell {
         
         //view 숨김처리
         self.companyTypeView.isHidden = true
-        self.hotCompaniesView.isHidden = true
+        self.hotCompaniesLabel.isHidden = true
+        self.hotCompaniesCollectionView.isHidden = true
         
+        self.companyAndReviewCommonView.isHidden = false
         self.reviewTypeView.isHidden = false
         
         if let prosPoint = cellItem.pros,
@@ -140,8 +142,10 @@ class CompanyTypeTableViewCell: UITableViewCell {
         
         //view 숨김처리
         self.reviewTypeView.isHidden = true
-        self.hotCompaniesView.isHidden = true
+        self.hotCompaniesLabel.isHidden = true
+        self.hotCompaniesCollectionView.isHidden = true
         
+        self.companyAndReviewCommonView.isHidden = false
         self.companyTypeView.isHidden = false
         
         if let salaryAvg = cellItem.salaryAvg,
@@ -165,10 +169,12 @@ class CompanyTypeTableViewCell: UITableViewCell {
             self.recommendRecruits = recruitItems
         }
         
+        self.companyAndReviewCommonView.isHidden = true
         self.reviewTypeView.isHidden = true
         self.companyTypeView.isHidden = true
         
-        self.hotCompaniesView.isHidden = false
+        self.hotCompaniesLabel.isHidden = false
+        self.hotCompaniesCollectionView.isHidden = false
         
         self.hotCompaniesCollectionView.reloadData()
     }

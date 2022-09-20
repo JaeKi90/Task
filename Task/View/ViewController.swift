@@ -126,11 +126,8 @@ class ViewController: RxViewController<TaskViewModel> {
         let companyTypeCellNib = UINib.init(nibName: CompanyTypeTableViewCell.defaultReuseIdentifier, bundle: nil)
         self.companyTableView.register(companyTypeCellNib, forCellReuseIdentifier: CompanyTypeTableViewCell.defaultReuseIdentifier)
         
-        let hotCompaniesTypeCellNib = UINib.init(nibName: HotCompanyTypeTableViewCell.defaultReuseIdentifier, bundle: nil)
-        self.companyTableView.register(hotCompaniesTypeCellNib, forCellReuseIdentifier: HotCompanyTypeTableViewCell.defaultReuseIdentifier)
-        
         self.companyTableView.rowHeight = UITableView.automaticDimension
-        self.companyTableView.estimatedRowHeight = 315
+        self.companyTableView.estimatedRowHeight = 250
         
         self.companyTableView.isHidden = true
     }
