@@ -9,11 +9,12 @@ import UIKit
 
 class CompanyTypeTableViewCell: UITableViewCell {
     
+    
+    @IBOutlet weak var companyAndReviewCommonView: UIView!
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var rateLabel: UILabel!
     @IBOutlet weak var industryLabel: UILabel!
-    
     @IBOutlet weak var updateDateLabel: UILabel!
     @IBOutlet weak var reviewSummaryLabel: UILabel!
     
