@@ -84,14 +84,14 @@
                         <color key="textColor" name="Gray03"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경력 대비 연봉이 높고 업무환경이 깨끗하게 잘 조성되어 있음. 직원들이 전부 여유로워서 쓸데없는 감정소모와 마찰이 없음" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRX-ja-P36">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="경력 대비 연봉이 높고 업무환경이 깨끗하게 잘 조성되어 있음. 직원들이 전부 여유로워서 쓸데없는 감정소모와 마찰이 없음" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRX-ja-P36">
                         <rect key="frame" x="20" y="135" width="335" height="65"/>
                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
                         <color key="textColor" name="Gray01"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8uS-Rb-UJz">
-                        <rect key="frame" x="20" y="216" width="335" height="163"/>
+                        <rect key="frame" x="20" y="216" width="335" height="143"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4,500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woK-BW-BfH">
                                 <rect key="frame" x="67" y="0.0" width="63" height="29"/>
@@ -106,13 +106,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="면접질문" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pY5-Mh-pVM">
-                                <rect key="frame" x="0.0" y="45" width="59" height="20.5"/>
+                                <rect key="frame" x="0.0" y="45" width="59" height="8"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="처음에 문앞에서 어쩔 줄 몰라하며 서있었는데, 다른 분께서 도와주시고 음료수도 준비해 주시고해서 사내 분위기가 좋구나 라고 느꼈습니다." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBA-5m-wVD">
-                                <rect key="frame" x="0.0" y="73.5" width="335" height="82"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="처음에 문앞에서 어쩔 줄 몰라하며 서있었는데, 다른 분께서 도와주시고 음료수도 준비해 주시고해서 사내 분위기가 좋구나 라고 느꼈습니다." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBA-5m-wVD">
+                                <rect key="frame" x="0.0" y="61" width="335" height="82"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <color key="textColor" name="Gray01"/>
                                 <nil key="highlightedColor"/>
@@ -141,7 +141,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Hv-TL-P5f">
-                        <rect key="frame" x="20" y="212" width="335" height="167"/>
+                        <rect key="frame" x="20" y="212" width="335" height="147"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장점" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NA-MS-Yft">
                                 <rect key="frame" x="0.0" y="0.0" width="29.5" height="21"/>
@@ -212,8 +212,8 @@
                     <constraint firstItem="rpW-SJ-f6K" firstAttribute="top" secondItem="m1g-cx-hgf" secondAttribute="top" constant="7" id="NnK-4g-guS"/>
                     <constraint firstAttribute="trailing" secondItem="Iz2-bq-EUM" secondAttribute="trailing" constant="20" id="OSS-EG-u98"/>
                     <constraint firstItem="BLc-zp-upG" firstAttribute="top" secondItem="QVm-Bx-SO3" secondAttribute="bottom" constant="23" id="PLm-Cq-FbF"/>
-                    <constraint firstItem="26j-RB-P8g" firstAttribute="top" secondItem="8uS-Rb-UJz" secondAttribute="bottom" id="Pit-Xf-hrx"/>
-                    <constraint firstItem="26j-RB-P8g" firstAttribute="top" secondItem="3Hv-TL-P5f" secondAttribute="bottom" id="Qhv-bg-CaO"/>
+                    <constraint firstItem="26j-RB-P8g" firstAttribute="top" secondItem="8uS-Rb-UJz" secondAttribute="bottom" constant="20" id="Pit-Xf-hrx"/>
+                    <constraint firstItem="26j-RB-P8g" firstAttribute="top" secondItem="3Hv-TL-P5f" secondAttribute="bottom" constant="20" id="Qhv-bg-CaO"/>
                     <constraint firstItem="3Hv-TL-P5f" firstAttribute="top" secondItem="bRX-ja-P36" secondAttribute="bottom" constant="12" id="TKg-jX-IwB"/>
                     <constraint firstItem="fqj-z4-ptp" firstAttribute="leading" secondItem="m1g-cx-hgf" secondAttribute="leading" constant="20" id="TTW-JN-saw"/>
                     <constraint firstAttribute="trailing" secondItem="BLc-zp-upG" secondAttribute="trailing" constant="20" id="WSi-0V-WYs"/>

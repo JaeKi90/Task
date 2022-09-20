@@ -9,18 +9,22 @@ import UIKit
 
 class HotCompanyTypeTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var companyCollectionView: UICollectionView!
-    
+    @IBOutlet weak var hotCompanyCollectionView: UICollectionView!
+
     static let defaultReuseIdentifier = "HotCompanyTypeTableViewCell"
     
     var recommendRecruits = [RecruitItem]()
     
     private func cofigureCollectionView() {
-        self.companyCollectionView.delegate = self
-        self.companyCollectionView.dataSource = self
+//        let nib = UINib.init(nibName: RecuruitCollectionViewCell.defaultReuseIdentifier2, bundle: nil)
+//        self.hotCompanyCollectionView.register(nib, forCellWithReuseIdentifier: RecuruitCollectionViewCell.defaultReuseIdentifier2)
+        self.hotCompanyCollectionView.register(
+            HotCompanyCollectionViewCell.self,
+            forCellWithReuseIdentifier: HotCompanyCollectionViewCell.reuseId
+        )
         
-        let nib = UINib.init(nibName: RecuruitCollectionViewCell.defaultReuseIdentifier, bundle: nil)
-        self.companyCollectionView.register(nib, forCellWithReuseIdentifier: RecuruitCollectionViewCell.defaultReuseIdentifier)
+        self.hotCompanyCollectionView.delegate = self
+        self.hotCompanyCollectionView.dataSource = self
     }
     
     override func awakeFromNib() {
@@ -31,8 +35,8 @@ class HotCompanyTypeTableViewCell: UITableViewCell {
     
     func render(recommendRecruits: [RecruitItem]) {
         self.recommendRecruits = recommendRecruits
-
-        self.companyCollectionView.reloadData()
+        
+        self.hotCompanyCollectionView.reloadData()
     }
     
 }
@@ -42,15 +46,30 @@ extension HotCompanyTypeTableViewCell: UICollectionViewDataSource {
         return recommendRecruits.count
     }
     
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//
+//        let cell = self.hotCompanyCollectionView.dequeueReusableCell(
+//            withReuseIdentifier: HothotCompanyCollectionViewCell.reuseId,
+//            for: indexPath
+//        ) as! HothotCompanyCollectionViewCell
+//
+//        cell.createConstraints()
+//
+////        let cell = hotCompanyCollectionView.dequeueReusableCell(
+////            withReuseIdentifier: RecuruitCollectionViewCell.defaultReuseIdentifier2,
+////            for: indexPath
+////        ) as! RecuruitCollectionViewCell
+////
+////        cell.render(recruitItem: recommendRecruits[indexPath.row], bookMarkRelay: nil)
+//
+//        return cell
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = self.hotCompanyCollectionView.dequeueReusableCell(withReuseIdentifier: HotCompanyCollectionViewCell.reuseId, for: indexPath) as! HotCompanyCollectionViewCell
         
-        let cell = companyCollectionView.dequeueReusableCell(
-            withReuseIdentifier: RecuruitCollectionViewCell.defaultReuseIdentifier,
-            for: indexPath
-        ) as! RecuruitCollectionViewCell
+        cell.createConstraints()
 
-        cell.render(recruitItem: recommendRecruits[indexPath.row], bookMarkRelay: nil)
-        
         return cell
     }
 }

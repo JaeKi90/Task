@@ -126,9 +126,6 @@ class ViewController: RxViewController<TaskViewModel> {
         let companyTypeCellNib = UINib.init(nibName: CompanyTypeTableViewCell.defaultReuseIdentifier, bundle: nil)
         self.companyTableView.register(companyTypeCellNib, forCellReuseIdentifier: CompanyTypeTableViewCell.defaultReuseIdentifier)
         
-        let reviewTypeCellNib = UINib.init(nibName: ReviewTypeTableViewCell.defaultReuseIdentifier, bundle: nil)
-        self.companyTableView.register(reviewTypeCellNib, forCellReuseIdentifier: ReviewTypeTableViewCell.defaultReuseIdentifier)
-        
         let hotCompaniesTypeCellNib = UINib.init(nibName: HotCompanyTypeTableViewCell.defaultReuseIdentifier, bundle: nil)
         self.companyTableView.register(hotCompaniesTypeCellNib, forCellReuseIdentifier: HotCompanyTypeTableViewCell.defaultReuseIdentifier)
         
@@ -140,6 +137,8 @@ class ViewController: RxViewController<TaskViewModel> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.isHidden = true
         
         self.setViewModel()
         
@@ -306,8 +305,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         
         let instance = DetailViewController.newInstance(companyName: recruitItem.title)
         
-//        self.navigationController?.pushViewController(instance, animated: true)
-        self.navigationController?.present(instance, animated: true)
+        self.navigationController?.pushViewController(instance, animated: true)
     }
 }
 
@@ -348,46 +346,52 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        switch self.cellItems[indexPath.row].cellType {
-        case .cellTypeReview:
-            let cell = companyTableView.dequeueReusableCell(
-                withIdentifier: CompanyTypeTableViewCell.defaultReuseIdentifier,
-                for: indexPath
-            ) as! CompanyTypeTableViewCell
-
-            cell.render(cellItem: self.viewModel.cellItems[indexPath.row])
-
-            return cell
-
-        case .cellTypeCompany:
-            let cell = companyTableView.dequeueReusableCell(
-                withIdentifier: CompanyTypeTableViewCell.defaultReuseIdentifier,
-                for: indexPath
-            ) as! CompanyTypeTableViewCell
-
-            cell.render(cellItem: self.viewModel.cellItems[indexPath.row])
-            
-            return cell
-            
-        case .cellTypeHorizontalTheme:
-            let cell = companyTableView.dequeueReusableCell(
-                withIdentifier: HotCompanyTypeTableViewCell.defaultReuseIdentifier,
-                for: indexPath
-            ) as! HotCompanyTypeTableViewCell
-            
-            if let recommendRecruits = self.viewModel.cellItems[indexPath.row].recommendRecruit {
-                cell.render(recommendRecruits: recommendRecruits)
-            }
-            
-            return cell
-        default:
-            let cell = companyTableView.dequeueReusableCell(
-                withIdentifier: ReviewTypeTableViewCell.defaultReuseIdentifier,
-                for: indexPath
-            ) as! ReviewTypeTableViewCell
-
-            return cell
+        let cell = companyTableView.dequeueReusableCell(
+            withIdentifier: CompanyTypeTableViewCell.defaultReuseIdentifier,
+            for: indexPath
+        ) as! CompanyTypeTableViewCell
+        
+        if cellItems[indexPath.row].cellType == .cellTypeHorizontalTheme {
+            cell.render(cellItem: cellItems[indexPath.row])
         }
+
+        cell.render(cellItem: self.viewModel.cellItems[indexPath.row])
+
+        return cell
+        
+//        switch self.cellItems[indexPath.row].cellType {
+//        case .cellTypeReview:
+//
+//
+//        case .cellTypeCompany:
+//            let cell = companyTableView.dequeueReusableCell(
+//                withIdentifier: CompanyTypeTableViewCell.defaultReuseIdentifier,
+//                for: indexPath
+//            ) as! CompanyTypeTableViewCell
+//
+//            cell.render(cellItem: self.viewModel.cellItems[indexPath.row])
+//
+//            return cell
+//
+////        case .cellTypeHorizontalTheme:
+////            let cell = companyTableView.dequeueReusableCell(
+////                withIdentifier: HotCompanyTypeTableViewCell.defaultReuseIdentifier,
+////                for: indexPath
+////            ) as! HotCompanyTypeTableViewCell
+////
+////            if let recommendRecruits = self.viewModel.cellItems[indexPath.row].recommendRecruit {
+////                cell.render(recommendRecruits: recommendRecruits)
+////            }
+////
+////            return cell
+//        default:
+//            let cell = companyTableView.dequeueReusableCell(
+//                withIdentifier: CompanyTypeTableViewCell.defaultReuseIdentifier,
+//                for: indexPath
+//            ) as! CompanyTypeTableViewCell
+//
+//            return cell
+//        }
     }
 }
 
