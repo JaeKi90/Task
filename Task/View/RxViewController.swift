@@ -25,6 +25,9 @@ class RxViewController<T: RxViewModel>: UIViewController, Deinitializable {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        self.deinitialize()
+        if self.parent == nil {
+            self.deinitialize()
+        }
+        
     }
 }

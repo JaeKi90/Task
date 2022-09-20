@@ -46,7 +46,7 @@ class RecuruitCollectionViewCell: UICollectionViewCell {
     
     var appealTags = [String]()
     
-    func render(recruitItem: RecruitItem, bookMarkRelay: PublishRelay<Int>?) {
+    func render(recruitItem: RecruitItem, bookMarkRelay: PublishRelay<Int>?, isNeedBookmark: Bool) {
         self.backgroundColor = .white
         
         self.bookmarkButton.setTitle("", for: .normal)
@@ -87,11 +87,15 @@ class RecuruitCollectionViewCell: UICollectionViewCell {
             self.appealCollectionView.isHidden = true
         }
         
-        if recruitItem.isBookmark {
-            self.bookmarkButton.imageView?.image = UIImage(named: "icon_bookmark")
-//            self.bookmarkButton.isHidden = true
+        if isNeedBookmark {
+            if recruitItem.isBookmark {
+                self.bookmarkButton.imageView?.image = UIImage(named: "icon_bookmark")
+    //            self.bookmarkButton.isHidden = true
+            } else {
+                self.bookmarkButton.imageView?.image = UIImage(named: "icon_bookmark_off")
+            }
         } else {
-            self.bookmarkButton.imageView?.image = UIImage(named: "icon_bookmark_off")
+            self.bookmarkButton.isHidden = true
         }
         
         //rx

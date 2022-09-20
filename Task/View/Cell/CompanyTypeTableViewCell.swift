@@ -180,7 +180,7 @@ extension CompanyTypeTableViewCell: UICollectionViewDataSource {
             for: indexPath
         ) as! RecuruitCollectionViewCell
 
-        cell.render(recruitItem: recommendRecruits[indexPath.row], bookMarkRelay: nil)
+        cell.render(recruitItem: recommendRecruits[indexPath.row], bookMarkRelay: nil, isNeedBookmark: false)
 
         return cell
     }
@@ -194,5 +194,9 @@ extension CompanyTypeTableViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 12
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
     }
 }

@@ -228,7 +228,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="B4y-fv-Gxc">
-                                <rect key="frame" x="0.0" y="24" width="375" height="240"/>
+                                <rect key="frame" x="0.0" y="40" width="375" height="240"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="bwW-lw-VNi"/>
@@ -248,7 +248,7 @@
                             <constraint firstAttribute="trailing" secondItem="B4y-fv-Gxc" secondAttribute="trailing" id="91M-nc-JdD"/>
                             <constraint firstItem="li7-wX-rcp" firstAttribute="top" secondItem="MFV-37-v8Y" secondAttribute="top" id="AAZ-I2-HMi"/>
                             <constraint firstItem="li7-wX-rcp" firstAttribute="leading" secondItem="MFV-37-v8Y" secondAttribute="leading" constant="20" id="QfK-Jt-6wy"/>
-                            <constraint firstItem="B4y-fv-Gxc" firstAttribute="top" secondItem="li7-wX-rcp" secondAttribute="bottom" id="VA4-Ug-MrX"/>
+                            <constraint firstItem="B4y-fv-Gxc" firstAttribute="top" secondItem="li7-wX-rcp" secondAttribute="bottom" constant="16" id="VA4-Ug-MrX"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26j-RB-P8g" userLabel="SeperateView">

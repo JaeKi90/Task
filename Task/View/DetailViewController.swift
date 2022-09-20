@@ -32,7 +32,6 @@ class DetailViewController: RxViewController<DetailViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.isHidden = false
         self.view.backgroundColor = .white
         
         self.companyNameLabel.text = self.viewModel.dependency.companyName

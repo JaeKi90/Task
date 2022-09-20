@@ -295,7 +295,10 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
             for: indexPath
         ) as! RecuruitCollectionViewCell
         
-        cell.render(recruitItem: self.recruitItems[indexPath.row], bookMarkRelay: self.viewModel.recruitBookmarkRelay)
+        cell.render(recruitItem: self.recruitItems[indexPath.row],
+                    bookMarkRelay: self.viewModel.recruitBookmarkRelay,
+                    isNeedBookmark: true
+        )
         
         return cell
     }
