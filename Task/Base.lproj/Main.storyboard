@@ -101,7 +101,7 @@
                                     <constraint firstItem="CH9-KW-gTd" firstAttribute="leading" secondItem="GLF-kS-h89" secondAttribute="leading" constant="20" id="idH-wg-OKN"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oiE-NG-pwn">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oiE-NG-pwn">
                                 <rect key="frame" x="0.0" y="203" width="414" height="659"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ViO-a8-o2i">

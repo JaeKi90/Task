@@ -33,6 +33,8 @@ class CompanyTypeTableViewCell: UITableViewCell {
     
     var recommendRecruits = [RecruitItem]()
     
+    var navigationController: UINavigationController?
+    
     private func cofigureCollectionView() {
         let nib = UINib.init(nibName: RecuruitCollectionViewCell.defaultReuseIdentifier, bundle: nil)
         self.hotCompaniesCollectionView.register(nib, forCellWithReuseIdentifier: RecuruitCollectionViewCell.defaultReuseIdentifier)
@@ -49,7 +51,9 @@ class CompanyTypeTableViewCell: UITableViewCell {
         self.cofigureCollectionView()
     }
     
-    func render(cellItem: CellItem) {
+    func render(cellItem: CellItem, navigationController: UINavigationController?) {
+        self.navigationController = navigationController
+        
         switch cellItem.cellType {
         case .cellTypeCompany:
             self.setCompanyTypeView(cellItem: cellItem)
@@ -211,5 +215,15 @@ extension CompanyTypeTableViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+    }
+}
+
+extension CompanyTypeTableViewCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let recruitItem = self.recommendRecruits[indexPath.row]
+        
+        let instance = DetailViewController.newInstance(companyName: recruitItem.title)
+        
+        self.navigationController?.pushViewController(instance, animated: true)
     }
 }

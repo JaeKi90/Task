@@ -351,16 +351,19 @@ extension ViewController: UITableViewDataSource {
             for: indexPath
         ) as! CompanyTypeTableViewCell
         
-        if cellItems[indexPath.row].cellType == .cellTypeHorizontalTheme {
-            cell.render(cellItem: cellItems[indexPath.row])
-        }
-
-        cell.render(cellItem: self.viewModel.cellItems[indexPath.row])
+        cell.render(cellItem: self.viewModel.cellItems[indexPath.row],
+                    navigationController: self.navigationController)
 
         return cell
     }
 }
 
 extension ViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let recruitItem = self.recruitItems[indexPath.row]
+        
+        let instance = DetailViewController.newInstance(companyName: recruitItem.title)
+        
+        self.navigationController?.pushViewController(instance, animated: true)
+    }
 }
