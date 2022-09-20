@@ -8,6 +8,8 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SnapKit
+import Then
 
 class RecuruitCollectionViewCell: UICollectionViewCell {
     
@@ -22,17 +24,35 @@ class RecuruitCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var rewordLabel: UILabel!
     
+    var isBookmarked: Bool = false {
+        didSet {
+            if isBookmarked {
+                self.testView.backgroundColor = .green
+            } else {
+                self.testView.backgroundColor = .red
+            }
+        }
+    }
+    
+    var isRxOpen = false
+    
+    let testView = UIView().then {
+        $0.backgroundColor = .red
+    }
+    
     static let defaultReuseIdentifier = "RecuruitCollectionViewCell"
-    static let defaultReuseIdentifier2 = "RecuruitCollectionViewCell2"
     
     var disposeBag = DisposeBag()
     
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
-    
-    deinit {
-        self.disposeBag = DisposeBag()
+        
+        self.addSubview(testView)
+        testView.snp.makeConstraints { make in
+            make.leading.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.width.height.equalTo(50)
+        }
     }
     
     fileprivate func cofigureCollectionView() {
@@ -89,22 +109,30 @@ class RecuruitCollectionViewCell: UICollectionViewCell {
         
         if isNeedBookmark {
             if recruitItem.isBookmark {
+//                print("==== 셀에서 에서 북마크 선택 표시 \(recruitItem.id): \(recruitItem.title)")
                 self.bookmarkButton.imageView?.image = UIImage(named: "icon_bookmark")
-    //            self.bookmarkButton.isHidden = true
+                self.isBookmarked = true
             } else {
+//                print("==== 셀에서 에서 북마크 선택 해제 \(recruitItem.id): \(recruitItem.title)")
                 self.bookmarkButton.imageView?.image = UIImage(named: "icon_bookmark_off")
+                self.isBookmarked = false
             }
         } else {
             self.bookmarkButton.isHidden = true
         }
         
         //rx
-        if let bookMarkRelay = bookMarkRelay {
+        if !isRxOpen {
             self.bookmarkButton.rx.throttleTap
+                .withUnretained(self)
                 .subscribe { _ in
-                    bookMarkRelay.accept(recruitItem.id)
-                }.disposed(by: disposeBag)
+                    bookMarkRelay?.accept(recruitItem.id)
+                    print("==== 셀 에서 북마크 선택  \(recruitItem.id): \(recruitItem.title )")
+                }.disposed(by: self.disposeBag)
+            
+            self.isRxOpen = true
         }
+        
     }
     
 }

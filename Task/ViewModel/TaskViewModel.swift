@@ -119,13 +119,12 @@ class TaskViewModel: RxViewModel, RxViewModelProtocol {
         self.recruitBookmarkRelay
             .withUnretained(self)
             .subscribe { (self, id) in
-                if var selectedItem = self.recruitItems.first{ $0.id == id },
+                if var selectedItem = self.recruitItems.first{ $0.id == id  },
                    let selectedItemIndex = self.recruitItems.firstIndex(of: selectedItem)
                 {
-                    selectedItem.isBookmark = !selectedItem.isBookmark
-                    
-                    self.recruitItems[selectedItemIndex] = selectedItem
-                    
+//                    selectedItem.isBookmark = !selectedItem.isBookmark
+                    self.recruitItems[selectedItemIndex].isBookmark = !self.recruitItems[selectedItemIndex].isBookmark
+                    print("==== 뷰모델 에서 북마크 데이터 변경  \(self.recruitItems[selectedItemIndex].id): \(self.recruitItems[selectedItemIndex].title)")
                     self.responseRecruitItemsRelay.accept(self.recruitItems)
                 }
             }.disposed(by: self.disposeBag)

@@ -147,7 +147,14 @@ class CompanyTypeTableViewCell: UITableViewCell {
         if let salaryAvg = cellItem.salaryAvg,
            let interviewQuestion = cellItem.interviewQuestion
         {
-            self.salaryLabel.text = "\(salaryAvg)"
+            var salary = ""
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = .decimal
+            if let rewordNumberString = numberFormatter.string(from: NSNumber(value: salaryAvg)) {
+                salary = rewordNumberString
+            }
+            
+            self.salaryLabel.text = "\(salary)"
             self.interviewQuestionLabel.text = interviewQuestion
         }
         
