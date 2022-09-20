@@ -228,8 +228,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="B4y-fv-Gxc">
-                                <rect key="frame" x="0.0" y="24" width="375" height="335"/>
+                                <rect key="frame" x="0.0" y="24" width="375" height="240"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="bwW-lw-VNi"/>
+                                </constraints>
                                 <inset key="scrollIndicatorInsets" minX="20" minY="16" maxX="0.0" maxY="0.0"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TmU-Ck-UCB">
                                     <size key="itemSize" width="128" height="128"/>
@@ -244,7 +247,6 @@
                             <constraint firstItem="B4y-fv-Gxc" firstAttribute="leading" secondItem="MFV-37-v8Y" secondAttribute="leading" id="1lS-Fk-BfP"/>
                             <constraint firstAttribute="trailing" secondItem="B4y-fv-Gxc" secondAttribute="trailing" id="91M-nc-JdD"/>
                             <constraint firstItem="li7-wX-rcp" firstAttribute="top" secondItem="MFV-37-v8Y" secondAttribute="top" id="AAZ-I2-HMi"/>
-                            <constraint firstAttribute="bottom" secondItem="B4y-fv-Gxc" secondAttribute="bottom" id="Cei-TC-89S"/>
                             <constraint firstItem="li7-wX-rcp" firstAttribute="leading" secondItem="MFV-37-v8Y" secondAttribute="leading" constant="20" id="QfK-Jt-6wy"/>
                             <constraint firstItem="B4y-fv-Gxc" firstAttribute="top" secondItem="li7-wX-rcp" secondAttribute="bottom" id="VA4-Ug-MrX"/>
                         </constraints>
