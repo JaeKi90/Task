@@ -120,11 +120,6 @@ class CompanyTypeTableViewCell: UITableViewCell {
               let updateDate = cellItem.updateDate,
               let reviewSummary = cellItem.reviewSummary else { return }
         
-//        let testTitle = "\u{d55c}\u{ad6d}\u{c6d0}\u{c790}\u{b825}\u{c758}\u{d559}\u{c6d0}"
-        
-        print(companyName)
-        companyName.convertUniCode()
-        
         //image
         self.logoImageView.layer.cornerRadius = 4
         self.logoImageView.layer.borderColor = UIColor.Gray03.cgColor

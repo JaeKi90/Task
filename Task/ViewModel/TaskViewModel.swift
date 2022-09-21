@@ -10,6 +10,8 @@ import RxSwift
 import RxCocoa
 
 class TaskViewModel: RxViewModel, RxViewModelProtocol {
+    
+    //자음 검색으로 위한 배열
     let hangul = ["ㄱ","ㄲ","ㄴ","ㄷ","ㄸ","ㄹ","ㅁ","ㅂ","ㅃ","ㅅ","ㅆ","ㅇ","ㅈ","ㅉ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"]
     
     struct Input {
@@ -122,9 +124,9 @@ class TaskViewModel: RxViewModel, RxViewModelProtocol {
                 if var selectedItem = self.recruitItems.first{ $0.id == id  },
                    let selectedItemIndex = self.recruitItems.firstIndex(of: selectedItem)
                 {
-//                    selectedItem.isBookmark = !selectedItem.isBookmark
+
                     self.recruitItems[selectedItemIndex].isBookmark = !self.recruitItems[selectedItemIndex].isBookmark
-                    print("==== 뷰모델 에서 북마크 데이터 변경  \(self.recruitItems[selectedItemIndex].id): \(self.recruitItems[selectedItemIndex].title)")
+                    
                     self.responseRecruitItemsRelay.accept(self.recruitItems)
                 }
             }.disposed(by: self.disposeBag)
@@ -153,13 +155,17 @@ class TaskViewModel: RxViewModel, RxViewModelProtocol {
     private func searchAndSetCellItems(name: String) {
         self.responseCellItemsRelay.accept(
             self.cellItems.filter {
-                // 초성인경우
-                if self.isChosung(word: name) {
-                    return ($0.name!.contains(name) || self.chosungCheck(word: $0.name!).contains(name))
-                }
-                // 디폴트 동일문자열 검색
-                else {
-                    return $0.name!.contains(name)
+                if $0.cellType != CellType.cellTypeHorizontalTheme {
+                    // 초성인경우
+                    if self.isChosung(word: name) {
+                        return ($0.name!.contains(name) || self.chosungCheck(word: $0.name!).contains(name))
+                    }
+                    // 디폴트 동일문자열 검색
+                    else {
+                        return $0.name!.contains(name)
+                    }
+                } else {
+                    return false
                 }
             }
         )

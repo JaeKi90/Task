@@ -180,12 +180,9 @@ class ViewController: RxViewController<TaskViewModel> {
                     //채용 콜렉션뷰 갱신
                     self.companyTableView.isHidden = true
                     self.recruitCollectionView.isHidden = false
-//                    self.recruitCollectionView.reloadData()
                 }
                 //상태에 맞게 버튼 UI 변경
                 self.setButton()
-
-
             }.disposed(by: self.disposeBag)
 
         self.companyButton.rx.throttleTap
@@ -203,11 +200,9 @@ class ViewController: RxViewController<TaskViewModel> {
                     //회사 테이블뷰 갱신
                     self.recruitCollectionView.isHidden = true
                     self.companyTableView.isHidden = false
-//                    self.companyTableView.reloadData()
                 }
                 //상태에 맞게 버튼 UI 변경
                 self.setButton()
-                
             }.disposed(by: self.disposeBag)
 
     }
@@ -277,9 +272,7 @@ extension ViewController: UITextFieldDelegate {
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return self.recruitItems.count
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

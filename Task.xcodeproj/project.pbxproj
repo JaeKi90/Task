@@ -20,7 +20,6 @@
 		3135B6C828D62A5400B69513 /* UIImage+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3135B6C728D62A5400B69513 /* UIImage+Extention.swift */; };
 		3135B6CA28D6309700B69513 /* AppealTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3135B6C928D6309700B69513 /* AppealTagCollectionViewCell.swift */; };
 		3135B6CC28D6362800B69513 /* LeftAlignedCollectionViewFlowLayoutForHashTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3135B6CB28D6362800B69513 /* LeftAlignedCollectionViewFlowLayoutForHashTag.swift */; };
-		31437BA328DB356500B117D3 /* UICollectionView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31437BA228DB356500B117D3 /* UICollectionView+Extention.swift */; };
 		3144E39828D702C60014307A /* CompanyTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3144E39728D702C60014307A /* CompanyTypeTableViewCell.xib */; };
 		3144E39A28D71E9C0014307A /* HotCompanyTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3144E39928D71E9C0014307A /* HotCompanyTypeTableViewCell.xib */; };
 		3144E39E28D7234F0014307A /* CompanyTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3144E39D28D7234F0014307A /* CompanyTypeTableViewCell.swift */; };
@@ -85,7 +84,6 @@
 		3135B6C728D62A5400B69513 /* UIImage+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extention.swift"; sourceTree = "<group>"; };
 		3135B6C928D6309700B69513 /* AppealTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppealTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		3135B6CB28D6362800B69513 /* LeftAlignedCollectionViewFlowLayoutForHashTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayoutForHashTag.swift; sourceTree = "<group>"; };
-		31437BA228DB356500B117D3 /* UICollectionView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extention.swift"; sourceTree = "<group>"; };
 		3144E39728D702C60014307A /* CompanyTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyTypeTableViewCell.xib; sourceTree = "<group>"; };
 		3144E39928D71E9C0014307A /* HotCompanyTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotCompanyTypeTableViewCell.xib; sourceTree = "<group>"; };
 		3144E39D28D7234F0014307A /* CompanyTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTypeTableViewCell.swift; sourceTree = "<group>"; };
@@ -292,7 +290,6 @@
 				3135B6C728D62A5400B69513 /* UIImage+Extention.swift */,
 				3135B6CB28D6362800B69513 /* LeftAlignedCollectionViewFlowLayoutForHashTag.swift */,
 				314CCFF628D8A3AA005E193A /* UIViewController+Extention.swift */,
-				31437BA228DB356500B117D3 /* UICollectionView+Extention.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -578,7 +575,6 @@
 				3135B6CA28D6309700B69513 /* AppealTagCollectionViewCell.swift in Sources */,
 				314B7C5F28D385DC00839C03 /* ModelType.swift in Sources */,
 				3135B6C628D60A8A00B69513 /* RecuruitCollectionViewCell.swift in Sources */,
-				31437BA328DB356500B117D3 /* UICollectionView+Extention.swift in Sources */,
 				3135B6C828D62A5400B69513 /* UIImage+Extention.swift in Sources */,
 				314B7C6228D386C400839C03 /* RecruitItems.swift in Sources */,
 				314CCFF728D8A3AA005E193A /* UIViewController+Extention.swift in Sources */,
