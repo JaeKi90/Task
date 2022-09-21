@@ -275,10 +275,6 @@ extension ViewController: UITextFieldDelegate {
 
 //MARK: - UICollectionViewDataSource
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -341,7 +337,13 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        
+        if self.viewModel.cellItems[indexPath.row].cellType == CellType.cellTypeHorizontalTheme {
+            return 300
+        } else {
+            return UITableView.automaticDimension
+        }
+    
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -353,7 +355,9 @@ extension ViewController: UITableViewDataSource {
         
         cell.render(cellItem: self.viewModel.cellItems[indexPath.row],
                     navigationController: self.navigationController)
-
+        
+        cell.layoutIfNeeded()
+        
         return cell
     }
 }

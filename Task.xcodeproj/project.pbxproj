@@ -20,6 +20,7 @@
 		3135B6C828D62A5400B69513 /* UIImage+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3135B6C728D62A5400B69513 /* UIImage+Extention.swift */; };
 		3135B6CA28D6309700B69513 /* AppealTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3135B6C928D6309700B69513 /* AppealTagCollectionViewCell.swift */; };
 		3135B6CC28D6362800B69513 /* LeftAlignedCollectionViewFlowLayoutForHashTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3135B6CB28D6362800B69513 /* LeftAlignedCollectionViewFlowLayoutForHashTag.swift */; };
+		31437BA328DB356500B117D3 /* UICollectionView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31437BA228DB356500B117D3 /* UICollectionView+Extention.swift */; };
 		3144E39828D702C60014307A /* CompanyTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3144E39728D702C60014307A /* CompanyTypeTableViewCell.xib */; };
 		3144E39A28D71E9C0014307A /* HotCompanyTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3144E39928D71E9C0014307A /* HotCompanyTypeTableViewCell.xib */; };
 		3144E39E28D7234F0014307A /* CompanyTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3144E39D28D7234F0014307A /* CompanyTypeTableViewCell.swift */; };
@@ -42,8 +43,6 @@
 		314B7C6628D387B800839C03 /* CellItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314B7C6428D387B800839C03 /* CellItems.swift */; };
 		314B7C6928D38A2900839C03 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314B7C6828D38A2900839C03 /* TaskRepository.swift */; };
 		314B7C6A28D38A2900839C03 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314B7C6828D38A2900839C03 /* TaskRepository.swift */; };
-		314B7C6D28D38B9000839C03 /* String+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314B7C6C28D38B9000839C03 /* String+Extention.swift */; };
-		314B7C6E28D38B9000839C03 /* String+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314B7C6C28D38B9000839C03 /* String+Extention.swift */; };
 		314B7C7928D393FF00839C03 /* TaskAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314B7C7828D393FF00839C03 /* TaskAPI.swift */; };
 		314B7C7A28D393FF00839C03 /* TaskAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314B7C7828D393FF00839C03 /* TaskAPI.swift */; };
 		314CCFF728D8A3AA005E193A /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314CCFF628D8A3AA005E193A /* UIViewController+Extention.swift */; };
@@ -86,6 +85,7 @@
 		3135B6C728D62A5400B69513 /* UIImage+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extention.swift"; sourceTree = "<group>"; };
 		3135B6C928D6309700B69513 /* AppealTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppealTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		3135B6CB28D6362800B69513 /* LeftAlignedCollectionViewFlowLayoutForHashTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayoutForHashTag.swift; sourceTree = "<group>"; };
+		31437BA228DB356500B117D3 /* UICollectionView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extention.swift"; sourceTree = "<group>"; };
 		3144E39728D702C60014307A /* CompanyTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyTypeTableViewCell.xib; sourceTree = "<group>"; };
 		3144E39928D71E9C0014307A /* HotCompanyTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotCompanyTypeTableViewCell.xib; sourceTree = "<group>"; };
 		3144E39D28D7234F0014307A /* CompanyTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTypeTableViewCell.swift; sourceTree = "<group>"; };
@@ -107,7 +107,6 @@
 		314B7C6128D386C400839C03 /* RecruitItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitItems.swift; sourceTree = "<group>"; };
 		314B7C6428D387B800839C03 /* CellItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellItems.swift; sourceTree = "<group>"; };
 		314B7C6828D38A2900839C03 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
-		314B7C6C28D38B9000839C03 /* String+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extention.swift"; sourceTree = "<group>"; };
 		314B7C7828D393FF00839C03 /* TaskAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskAPI.swift; sourceTree = "<group>"; };
 		314CCFF628D8A3AA005E193A /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
 		314CCFFA28D8CFAB005E193A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -288,12 +287,12 @@
 		314B7C6B28D38B8000839C03 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
-				314B7C6C28D38B9000839C03 /* String+Extention.swift */,
 				3135B6C028D5E98C00B69513 /* UIColor+Extention.swift */,
 				3135B6C228D5EF0800B69513 /* RxSwift+Extention.swift */,
 				3135B6C728D62A5400B69513 /* UIImage+Extention.swift */,
 				3135B6CB28D6362800B69513 /* LeftAlignedCollectionViewFlowLayoutForHashTag.swift */,
 				314CCFF628D8A3AA005E193A /* UIViewController+Extention.swift */,
+				31437BA228DB356500B117D3 /* UICollectionView+Extention.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -568,7 +567,6 @@
 				314B7C7928D393FF00839C03 /* TaskAPI.swift in Sources */,
 				314CCFFB28D8CFAB005E193A /* DetailViewController.swift in Sources */,
 				3135B6C328D5EF0800B69513 /* RxSwift+Extention.swift in Sources */,
-				314B7C6D28D38B9000839C03 /* String+Extention.swift in Sources */,
 				314B7C6528D387B800839C03 /* CellItems.swift in Sources */,
 				3135B6CC28D6362800B69513 /* LeftAlignedCollectionViewFlowLayoutForHashTag.swift in Sources */,
 				314CCFFD28D8D26B005E193A /* DetailViewModel.swift in Sources */,
@@ -580,6 +578,7 @@
 				3135B6CA28D6309700B69513 /* AppealTagCollectionViewCell.swift in Sources */,
 				314B7C5F28D385DC00839C03 /* ModelType.swift in Sources */,
 				3135B6C628D60A8A00B69513 /* RecuruitCollectionViewCell.swift in Sources */,
+				31437BA328DB356500B117D3 /* UICollectionView+Extention.swift in Sources */,
 				3135B6C828D62A5400B69513 /* UIImage+Extention.swift in Sources */,
 				314B7C6228D386C400839C03 /* RecruitItems.swift in Sources */,
 				314CCFF728D8A3AA005E193A /* UIViewController+Extention.swift in Sources */,
@@ -599,7 +598,6 @@
 				314B7C6028D385DC00839C03 /* ModelType.swift in Sources */,
 				314B7C6A28D38A2900839C03 /* TaskRepository.swift in Sources */,
 				314B7C3B28D35BAC00839C03 /* TaskTests.swift in Sources */,
-				314B7C6E28D38B9000839C03 /* String+Extention.swift in Sources */,
 				314B7C6628D387B800839C03 /* CellItems.swift in Sources */,
 				314B7C6328D386C400839C03 /* RecruitItems.swift in Sources */,
 				314B7C7A28D393FF00839C03 /* TaskAPI.swift in Sources */,

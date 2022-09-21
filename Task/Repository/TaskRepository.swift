@@ -19,7 +19,7 @@ class TaskRepository: TaskRepositoryProtocol {
         return TaskAPI.recruitItems
             .request()
             .map {
-                let jsonString = try $0.mapString().removedEscapeCharacters
+                let jsonString = try $0.mapString()
                 
                 guard let value = jsonString.data(using: .utf8) else { return $0 }
                 
@@ -39,7 +39,7 @@ class TaskRepository: TaskRepositoryProtocol {
         return TaskAPI.cellItems
             .request()
             .map {
-                let jsonString = try $0.mapString().removedEscapeCharacters
+                let jsonString = try $0.mapString()
                 
                 guard let value = jsonString.data(using: .utf8) else { return $0 }
                 

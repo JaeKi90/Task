@@ -225,10 +225,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="B4y-fv-Gxc">
-                        <rect key="frame" x="0.0" y="40" width="375" height="240"/>
+                        <rect key="frame" x="0.0" y="40" width="375" height="319"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="240" id="bwW-lw-VNi"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="319" id="tOm-al-Hmj"/>
                         </constraints>
                         <inset key="scrollIndicatorInsets" minX="20" minY="16" maxX="0.0" maxY="0.0"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TmU-Ck-UCB">
@@ -260,7 +260,7 @@
                     <constraint firstItem="8uS-Rb-UJz" firstAttribute="leading" secondItem="m1g-cx-hgf" secondAttribute="leading" constant="20" id="ZAN-bV-y78"/>
                     <constraint firstItem="3Hv-TL-P5f" firstAttribute="top" secondItem="Rv6-xG-KPN" secondAttribute="bottom" constant="12" id="ZgP-fx-7Co"/>
                     <constraint firstItem="B4y-fv-Gxc" firstAttribute="leading" secondItem="m1g-cx-hgf" secondAttribute="leading" id="bjh-94-JyB"/>
-                    <constraint firstItem="26j-RB-P8g" firstAttribute="top" secondItem="B4y-fv-Gxc" secondAttribute="bottom" priority="250" constant="20" id="fb1-qy-ugj"/>
+                    <constraint firstItem="26j-RB-P8g" firstAttribute="top" secondItem="B4y-fv-Gxc" secondAttribute="bottom" constant="20" id="fb1-qy-ugj"/>
                     <constraint firstAttribute="trailing" secondItem="8uS-Rb-UJz" secondAttribute="trailing" constant="20" id="hl1-mM-8ju"/>
                     <constraint firstItem="Rv6-xG-KPN" firstAttribute="top" secondItem="m1g-cx-hgf" secondAttribute="top" id="qHL-O3-0wZ"/>
                     <constraint firstAttribute="trailing" secondItem="B4y-fv-Gxc" secondAttribute="trailing" id="qf7-Ci-E82"/>
